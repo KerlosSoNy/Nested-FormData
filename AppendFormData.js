@@ -1,10 +1,11 @@
-// TypeScript Function
+// JavaScript Function
+
 
 export function appendToFormData(
-    formData: FormData,
-    data: any,
-    parentKey: string = ''
-): FormData {
+    formData,
+    data,
+    parentKey = ''
+) {
     if (data && typeof data === 'object' && !(data instanceof Date) && !(data instanceof File)) {
         Object.entries(data).forEach(([key, value]) => {
             const fullKey = parentKey ? `${parentKey}[${key}]` : key;
